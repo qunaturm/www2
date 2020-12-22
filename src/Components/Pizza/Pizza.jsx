@@ -1,6 +1,6 @@
 import { Card, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { cloneElement } from 'react'
+import { createElement } from 'react'
 
 function Pizza({pizza, myButton, myButtonProp}) {
     return (
@@ -9,7 +9,7 @@ function Pizza({pizza, myButton, myButtonProp}) {
             <Card.Body>
                 <Card.Title>{pizza.name}</Card.Title>
                 <Card.Text>{pizza.description}</Card.Text>
-                <div>{myButton(myButtonProp)}</div>
+                <div>{createElement(myButton, myButtonProp)}</div>
             </Card.Body>
         </Card>
     )
