@@ -9,6 +9,8 @@ function Pizza({pizza, myButton, myButtonProp}) {
             <Card.Body>
                 <Card.Title>{pizza.name}</Card.Title>
                 <Card.Text>{pizza.description}</Card.Text>
+                <Card.Title>Состав</Card.Title>
+                <Card.Text>{pizza.sostav}</Card.Text>
                 <div>{createElement(myButton, myButtonProp)}</div>
             </Card.Body>
         </Card>

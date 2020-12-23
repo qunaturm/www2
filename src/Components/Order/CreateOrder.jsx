@@ -2,8 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom'
 import Pizza from '../Pizza/Pizza'
 import {useState, useEffect} from 'react'
-import userForm from '../Catalog/userForm'
-import { Formik, Field, Form } from 'formik';
+import UserForm from '../Catalog/UserForm'
+import AdditionalsAndSostav from '../Catalog/AdditionalsAndSostav'
 
 function ConfirmOrderButton({pizza, input}){ 
     return (
@@ -13,50 +13,14 @@ function ConfirmOrderButton({pizza, input}){
 
 function AdditionsSelector({availableAdditions, additions, setSelectedAdditions}) {
     return (
-        <div>additionals selectors</div>
+        <AdditionalsAndSostav/>
     )
 }
 
 function InputUserData({data, setDate}) {
 
     return (
-        <div>
-        <h2>Заполните поля ниже, чтобы сделать заказ</h2>
-        <Formik
-          initialValues={{
-            firstName: '',
-            lastName: '',
-            email: '',
-            address: '',
-          }}
-          onSubmit={async (values) => {
-            await new Promise((r) => setTimeout(r, 500));
-            alert(JSON.stringify(values, null, 2));
-          }}
-        >
-        <Form>
-        <label htmlFor="firstName">Имя</label>
-        <Field id="firstName" name="firstName" placeholder="Иван" />
-
-        <label htmlFor="lastName">Фамилия</label>
-        <Field id="lastName" name="lastName" placeholder="Иванов" /> 
-
-        <label htmlFor="email">Электронная почта</label>
-        <Field id="email" name="email" placeholder="ivan_ivanov@mail.ru" />
-
-        <label htmlFor="email">Адрес доставки</label>
-        <Field id="lastName" name="lastName" placeholder="Проспект Гагарина 23 к.1" />
-
-        <Field
-          id="email"
-          name="email"
-          placeholder="jane@acme.com"
-          type="email"
-        />
-        <button type="submit">Заказать</button>
-      </Form>
-    </Formik>
-  </div>
+        <UserForm/>
     )
 
 }
@@ -96,7 +60,7 @@ function CreateOrder({match}) {
                         <Pizza pizza={pizza} myButton={ConfirmOrderButton} myButtonProp={{pizza, userInput}}/>
                     </Row>
                     <Row>
-                        <AdditionsSelector availableAdditions={pizza.additionals} additions={additions} setSelectedAdditions={setSelectedAdditions}/>
+                        <AdditionsSelector/>
                     </Row>
                 </Col>
                 <Col xs={6}>
