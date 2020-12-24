@@ -53,7 +53,7 @@ function UserForm({ userInput, setUserInput }) {
 
             <InputGroup className="mb-3">
                 <InputGroup.Prepend>
-                    <InputGroup.Text id="basic-addon1">Фамилия</InputGroup.Text>
+                    <InputGroup.Text id="basic-addon1">Номер</InputGroup.Text>
                 </InputGroup.Prepend>
                 <FormControl value = {customerPhone.value} onChange = {customerPhone.onChange}
                     placeholder="+79999999999"

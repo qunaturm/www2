@@ -64,18 +64,18 @@ function Order({ match }) {
                                 <tr>
                                     <th>#</th>
                                     <th>Имя</th>
-                                    <th>Фамилия</th>
                                     <th>Эл. почта</th>
-                                    <th>Номер телефона</th>
+                                    <th>Номер</th>
+                                    <th>Адрес доставки</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Вы</td>
                                     <td>{orderInfo.customerName}</td>
-                                    <td>{orderInfo.customerAddress}</td>
                                     <td>{orderInfo.customerEmail}</td>
                                     <td>{orderInfo.customerPhone}</td>
+                                    <td>{orderInfo.customerAddress}</td>
                                 </tr>
                             </tbody>
                         </Table>
