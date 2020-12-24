@@ -6,6 +6,7 @@ import Home from '../Pages/Home';
 import AboutUs from '../Pages/AboutUs';
 import PersonalArea from '../Pages/PersonalArea';
 import CreateOrder from '../Components/Order/CreateOrder'
+import Order from "./Order/Order";
 
 export function Header() {
   return (
@@ -34,6 +35,7 @@ export function Header() {
             <Route exact path="/about" component={ AboutUs } />
             <Route exact path="/personalArea" component={ PersonalArea } />
             <Route exact path="/createOrder/:pizzaId" component={ CreateOrder } />
+            <Route exact path="/order/:orderId" component={ Order } />
           </Switch>
       </Router>
     </>

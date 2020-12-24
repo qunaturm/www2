@@ -17,7 +17,7 @@ function Catalog() {
     const [pizzas, setPizzas] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/pizza", {
+        fetch("https://3001-dd52ac3c-6816-4729-802c-b96ba0fb1a9e.ws-eu03.gitpod.io/api/pizza", {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json;charset=utf-8'
